@@ -93,10 +93,13 @@ namespace Encrypt
 }
 public class NumEncrypt : BaseClass
 {
-    public string getVersion()
-    {
-        throw new NotImplementedException();
-    }
+    #region class info
+    /// <summary>
+    /// Gets version of the class
+    /// </summary>
+    /// <returns>Version</returns>
+    public string getVersion() { return "1"; }
+    #endregion
     #region methods
     static public int Encrypt(int pin)
     {
