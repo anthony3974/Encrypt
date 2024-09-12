@@ -1,12 +1,11 @@
-﻿using BaseClassLibrary;
-using System;
+﻿using System;
 
 namespace Encrypt
 {
     /// <summary>
     /// Good for high enryption of text
     /// </summary>
-    public class HighEncrypt : BaseClass
+    public class HighEncrypt
     {
         #region class info
         /// <summary>
@@ -91,7 +90,10 @@ namespace Encrypt
         #endregion
     }
 }
-public class NumEncrypt : BaseClass
+/// <summary>
+/// Just for Encrypting numbers
+/// </summary>
+public class NumEncrypt
 {
     #region class info
     /// <summary>
@@ -101,6 +103,11 @@ public class NumEncrypt : BaseClass
     public string getVersion() { return "1"; }
     #endregion
     #region methods
+    /// <summary>
+    /// Encrypt a number
+    /// </summary>
+    /// <param name="pin">Sets the number to encrypt</param>
+    /// <returns>The encrypted number</returns>
     static public int Encrypt(int pin)
     {
         string R = "";
@@ -108,6 +115,11 @@ public class NumEncrypt : BaseClass
         for (int i = 0; i < S.Length; i++) R += (int.Parse(S[i].ToString()) / 2).ToString() + (int.Parse(S[i].ToString()) % 2).ToString();
         return int.Parse(R);
     }
+    /// <summary>
+    /// Decrypt a number
+    /// </summary>
+    /// <param name="pin">Number to decrypt</param>
+    /// <returns>The number to decrypt</returns>
     static public int Decrypt(int pin)
     {
         string R = "";
