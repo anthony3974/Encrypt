@@ -1,4 +1,4 @@
-# Encrypt
+# Encrypt | Class Library
 
 ### For Encrypted text to numbers
 
